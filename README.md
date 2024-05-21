@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# front-end-libreria
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+Este proyecto constituye el frontend de una aplicación destinada a la gestión de información de libros para la librería "Apilados". Está desarrollado con React y se conecta a un backend API RESTful construido con Node.js y Express. La aplicación permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los registros de libros, facilitando a los trabajadores de la empresa la búsqueda y administración rápida de los mismos.
 
-In the project directory, you can run:
+## Características
 
-### `npm start`
+- **Enrutamiento:** Configurado con `react-router-dom` para la navegación del sitio.
+- **Cliente HTTP:** Conexión al backend mediante `axios`.
+- **Componentes React:** Construcción modular y reutilizable de componentes.
+- **Validación de Datos:** Utiliza `simple-react-validator` para validar el ingreso de datos.
+- **Dinamismo en Componentes:** Uso de JSX y métodos del ciclo de vida de React para una experiencia interactiva.
+- **Búsqueda:** Permite buscar libros por nombre, autor y editorial.
+- **Visualización de Datos:** Muestra fotografía, nombre, autor y editorial de los libros, con enlaces para detalles, actualización y eliminación.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estructura del Proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```plaintext
+/frontend
+└── src
+    ├── components
+    │   ├── Nav.js
+    │   ├── Home.js
+    │   ├── ListarLibros.js
+    │   ├── LibroRegistro.js
+    │   ├── AgregarLibro.js
+    │   ├── ActualizarRegistro.js
+    │   ├── EliminarRegistro.js
+    │   ├── BuscarLibro.js
+    │   └── BusquedaPersonalizada.js
+    ├── App.js
+    └── index.js
+```
 
-### `npm test`
+## Instrucciones de Instalación
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clona el repositorio.
+2. Navega a la carpeta `frontend`.
+3. Instala las dependencias: `npm install`.
+4. Inicia la aplicación: `npm start`.
 
-### `npm run build`
+## Componentes Principales
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Nav.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Descripción:** Barra de navegación para moverse entre las diferentes páginas de la aplicación.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Home.js
 
-### `npm run eject`
+- **Descripción:** Página de bienvenida de la aplicación.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ListarLibros.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Descripción:** Lista todos los libros disponibles.
+- **Visualización:** Muestra la fotografía, nombre, autor y editorial de cada libro, con un enlace a los detalles del libro.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### LibroRegistro.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Descripción:** Muestra los detalles de un libro específico.
+- **Funcionalidades:** Incluye enlaces para actualizar o eliminar el libro.
 
-## Learn More
+### AgregarLibro.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Descripción:** Permite agregar un nuevo libro.
+- **Validación:** Utiliza `simple-react-validator` para validar los datos del libro.
+- **Enlace:** Añade el libro a la base de datos mediante una petición HTTP a la API.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ActualizarRegistro.js
 
-### Code Splitting
+- **Descripción:** Permite actualizar la información de un libro existente.
+- **Validación:** Utiliza `simple-react-validator` para validar los datos actualizados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### EliminarRegistro.js
 
-### Analyzing the Bundle Size
+- **Descripción:** Permite eliminar un libro de la base de datos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### BuscarLibro.js
 
-### Making a Progressive Web App
+- **Descripción:** Permite buscar un libro específico a través de su ID.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### BusquedaPersonalizada.js
 
-### Advanced Configuration
+- **Descripción:** Permite buscar libros por nombre, autor o editorial.
+- **Funcionalidades:** Realiza una búsqueda dinámica y muestra los resultados correspondientes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Integración con Backend
 
-### Deployment
+Este proyecto trabaja en conjunto con el backend disponible en el siguiente repositorio:
+[api_restful_libreria](https://github.com/jmcstoltze/api_restful_libreria)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Capturas de Pantalla
 
-### `npm run build` fails to minify
+La carpeta `screenshots` en la raíz del proyecto contiene imágenes de la aplicación en funcionamiento.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Autor
+
+Jose Contreras Stoltze
